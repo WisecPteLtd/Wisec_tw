@@ -1,0 +1,14 @@
+// icon設定
+$icon: (
+	'fb',
+	'twitter',
+	'ig',
+);
+
+@each $name in $icon {
+	.icon_#{$name} {
+		content: '';
+		display: inline-block;
+		background:url(../images/icon_#{$name}.svg) no-repeat center / contain;
+	}
+}

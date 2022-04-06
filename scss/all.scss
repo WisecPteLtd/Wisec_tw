@@ -1,14 +1,18 @@
 @import "share_variable";
 @import "reset";
 @import "mixin";
+@import "_mixin_layout";
 
-@import "layout_mixin"; //該站專屬mixin
+
 
 
 
 // layout
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;700&family=Prata&family=Dancing+Script&display=swap');
-@import "top_menu"; //上面menu
-@import "main"; //主內容
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap');
+@import "frame"; //架構
+@import "home"; //主頁
+@import "about_us"; //關於我們
+@import "product"; //商品
+@import "contact"; //聯絡我們
 
 

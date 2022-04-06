@@ -1,23 +1,19 @@
 // 字體顏色
 $txt_color: (
     primary: #fff,
-    secondary: #6d6d6d,
-    gray: #b1afa4,
-    lightgray: #d6d4cb,
-    lightgray02: #96958d,
-    brown: #332f2c,
-    lightbrown: #b3ab96,
-    green: #736a49,
+    secondary: #3b1616,
+    gray: #171614,
+    brown: #3A2618,
+    beige: #9A8873,
     shadow: hsla(354, 29%, 7%, 0.5),
 );
 
 // 背景色
 $bg_color: (
-    primary: #f2efed,
-    secondary: #2b2725,
-    brown: #403d38,
-    brown_gradual: linear-gradient(to bottom, #2b2725 29px, #332f2c 30px, #332f2c 100%),
-    green: #736a49,
+    primary: #3b1616,
+    secondary: #171614,
+    brown: #3A2618,
+    beige: #9A8873,
     white: #fff,
     shadow: rgba(0, 0, 0, .25),
 );
