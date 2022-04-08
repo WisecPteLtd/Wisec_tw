@@ -17,7 +17,7 @@
         width: 200px;
         height: 100%;
         transform: translate3d(-100%, 0, 0);
-        z-index: 2;
+        z-index: 10;
 
         // ph開啟menu
         &.--active{
@@ -33,8 +33,48 @@
         background: url(../images/img_logo.png) no-repeat center / contain;
         margin: auto;
     }
-    // ph切換按鈕 .main__active_btn
-    &__active_btn {}
+    // ph切換按鈕 .menu__close_btn
+    &__close_btn {
+        @include pos_a(tr, 10px);
+        width: 24px;
+        height: 17px;
+
+        &::before,
+        &::after,
+        span{
+            @extend %transition;
+            @include pos_a(trb, 0);
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: map-get($bg_color, beige);
+            transform-origin: center;
+            margin: auto;
+        }
+
+        &::before {
+            transform: translate3d(0, 7px, 0);
+        }
+
+        &::after {
+            transform: translate3d(0, -7px, 0);
+        }
+
+        @include hoverHandler{
+            span{
+                opacity: 0;
+            }
+            &::before{
+                background: map-get($bg_color, white);
+                transform: translate3d(0, 0, 0) rotate(45deg);
+            }
+            &::after{
+                background: map-get($bg_color, white);
+                transform: translate3d(0, 0, 0) rotate(-45deg);
+            }
+        }
+    }
 
     // menu按鈕 .menu__list
     &__list{
@@ -182,4 +222,49 @@
 .main{
     flex: 1 1 100%;
     background: map-get($bg_color, white);
+
+    // .main__active_btn
+    &__active_btn {
+        @include pos_a(tl, 10px);
+        width: 24px;
+        height: 17px;
+
+        &::before,
+        &::after,
+        span {
+            @extend %transition;
+            @include pos_a(trb, 0);
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: map-get($bg_color, primary);
+            transform-origin: right center;
+            margin: auto;
+        }
+
+        &::before {
+            transform: translate3d(0, 7px, 0);
+        }
+
+        &::after {
+            transform: translate3d(0, -7px, 0);
+        }
+
+        @include hoverHandler {
+            span {
+                opacity: 0;
+            }
+
+            &::before {
+                background: map-get($bg_color, beige);
+                transform: translate3d(0, 0, 0) rotate(25deg);
+            }
+
+            &::after {
+                background: map-get($bg_color, beige);
+                transform: translate3d(0, 0, 0) rotate(-25deg);
+            }
+        }
+    }
 }
