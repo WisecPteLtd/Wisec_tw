@@ -293,9 +293,9 @@ $direction: (
 
 );
 @each $name, $value in $direction{
-	@for $num from 5 through 20 {
+	@for $num from 0 through 20 {
 		.m#{$name}#{$num} {
-			margin-#{$value}: $num + px;
+			margin-#{$value}: $num + px !important;
 		}
 	}
 }

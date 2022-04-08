@@ -9,7 +9,7 @@
     @include d_f(flex, center, center);
     position: relative;
     flex: none;
-    width: 200px;
+    width: 240px;
     background: map-get($bg_color, primary);
 
     @include mw_md {
@@ -25,36 +25,155 @@
         }
     }
 
+    // .menu__logo
     &__logo{
-        @include pos_a(trl, 10%, 0, 0);
+        @include pos_a(trl, 24px, 0, 0);
         width: 100px;
         height: 146px;
         background: url(../images/img_logo.png) no-repeat center / contain;
         margin: auto;
     }
-
-    // ph切換按鈕
+    // ph切換按鈕 .main__active_btn
     &__active_btn {}
 
-    // menu按鈕
+    // menu按鈕 .menu__list
     &__list{
+        width: 100%;
+        max-width: 160px;
         font-size: 20px;
         text-align: center;
+
+        >li{
+            position: relative;
+            padding-top: 16px;
+            margin-bottom: 16px;
+            
+            ul{
+                padding-top: 21px;
+            }
+        }
+
+        span{
+            @extend %hand;
+            display: block;
+            height: 100%;
+            
+            &::before,
+            &::after {
+                @include pos_a(tl, 56px, 0);
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: map-get($bg_color, beige);
+            }
+
+            &::after {
+                @extend %transition;
+                width: 0%;
+                background: map-get($bg_color, white);
+            }
+
+            @include hoverHandler {
+                color: map-get($bg_color, beige);
+                
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+        // 酒類細項按鈕
+        .add_btn{
+            @extend %transition;
+            @include pos_a(tr, 18px, 5px);
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: auto;
+            &::before,
+            &::after {
+                @extend %transition;
+                @include pos_a(trbl, 0);
+                content: '';
+                height: 1px;
+                background: map-get($bg_color, beige);
+                margin: auto;
+            }
+            &::after{
+                transform: rotate(90deg);
+            }
+
+            @include hoverHandler{
+                filter: brightness(2);
+            }
+
+            @at-root li.--on .add_btn{
+                transform: rotate(45deg);
+                filter: brightness(2);
+
+                @include hoverHandler {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        // .menu__list__detail
+        &__detail li {
+            width: 80%;
+            padding: 5px 0;
+            margin: auto;
+
+            code{
+                @extend %hand;
+                position: relative;
+                padding: 0 10px;
+                background: map-get($bg_color, primary);
+                &::before,
+                &::after {
+                    @extend %transition;
+                    @include pos_a(trb, 0, 100%, 0);
+                    content: '';
+                    width: 0;
+                    height: 1px;
+                    background: map-get($bg_color, beige);
+                    margin: auto;
+                    transform: translate3d(0, 5px, 0);
+                }
+                &::before {
+                    right: auto;
+                    left: 100%;
+                }
+
+                @include hoverHandler{
+                    color: map-get($bg_color, beige);
+
+                    &::before,
+                    &::after{
+                        width: 24px;
+                        background: map-get($bg_color, white);
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+
+            
+        }
     }
 
-    // 下方SNS
+    // 下方SNS .menu__foot
     &__foot{
-        @include pos_a(bl, 0, 10%, 0);
-        font-size: 0;
-        margin: auto;
-        text-align: center;
-
-        li{
-            display: inline-block;
-        }
+        @include pos_a(bl, 24px, 0);
+        @include d_f(flex, center, center);
+        width: 100%;
+        
         i{
+            @extend %hand;
             width: 30px;
             height: 30px;
+            margin: 0 5px;
+            
+            @include hoverHandler{
+                filter: brightness(2);
+            }
         }
     }
 }
