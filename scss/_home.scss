@@ -1,0 +1,52 @@
+.home{
+    @extend %txtshadow;
+    height: 100%;
+    background: url(../images/img_indexbg.jpg) no-repeat center / cover;
+    color: map-get($txt_color, secondary);
+    font-size: 24px;
+
+    @include mw_lg {
+        font-size: 20px;
+    }
+    @include mw_xs {
+        font-size: 14px;
+    }
+    
+    // .home__note
+    &__note{
+        @include pos_a(tl, 20%, 10%);
+        width: 100%;
+        max-width: 750px;
+        padding: 0 10px;
+
+        span{
+            display: block;
+        }
+        // .home__note__txt01
+        &__txt01 {
+            color: map-get($txt_color, beige);
+        }
+        // .home__note__title
+        &__title {
+            font-size: 85px;
+            font-family: 'Abril Fatface', cursive;
+            margin-bottom: 20px;
+
+            @include mw_md {
+                font-size: 65px;
+            }
+            @include mw_xs {
+                font-size: 40px;
+            }
+        }
+        // .home__note__txt02
+        &__txt02 {
+            width: 80%;
+            margin-left: auto;
+
+            @include mw_sm {
+                margin-left: 0;
+            }
+        }
+    }
+}

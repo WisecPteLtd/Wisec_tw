@@ -131,11 +131,11 @@ tt {
 	::-webkit-scrollbar {
 		width: 6px;
 		height: 6px;
-		background-color: map-get($bg_color, primary);
+		background-color: map-get($txt_color, primary);
 	}
 
 	::-webkit-scrollbar-thumb {
-		background-color: map-get($bg_color, brown);
+		background-color: map-get($txt_color, brown);
 		border: 1px map-get($bg_color, primary) solid;
 		border-radius: 3px;
 		cursor: pointer;
@@ -144,10 +144,10 @@ tt {
 	}
 
 	*:hover::-webkit-scrollbar-thumb {
-		background-color: map-get($bg_color, brown);
+		background-color: map-get($txt_color, brown);
 	}
 
 	::-webkit-scrollbar-corner {
-		background-color: map-get($bg_color, primary);
+		background-color: map-get($txt_color, primary);
 	}
 }

@@ -26,7 +26,7 @@
         <!-- 左邊menu -->
         <!-- ph開啟menu加上--active -->
         <div class="menu">
-            <i class="menu__logo"></i>
+            <h1 class="menu__logo">New Eagle 新鷹有限公司</h1>
 
             <!-- ph關閉menu按鈕 -->
             <button class="menu__close_btn">
@@ -35,13 +35,13 @@
             <!-- ph關閉menu按鈕 end -->
     
             <ul class="menu__list">
-                <li><span>HOME</span></li>
+                <li class="--on"><span>HOME</span></li>
                 <li><span>About Us</span></li>
                 <!-- 打開酒類細項 .--on -->
                 <li class="mb0">
                     <span>Buy Wines</span>
                     <ul class="menu__list__detail">
-                        <li><code>地區</code></li>
+                        <li class="--on"><code>地區</code></li>
                         <li><code>時尚</code></li>
                         <li><code>風格</code></li>
                         <li><code>品味</code></li>
@@ -78,11 +78,29 @@
 
 
             <!-- 主內容 -->
-            <div class="main__info"></div>
+            <div class="main__info">
+                <div class="home" data-aos="fade-in" data-aos-duration="2500">
+                    <div class="home__note">
+                        <span class="home__note__txt01" data-aos="fade-left" data-aos-duration="800"
+                            data-aos-delay="1000">EXELENT
+                            WINE COLLECTION</span>
+                        <span class="home__note__title" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="2500">The Wine Country</span>
+                        <span class="home__note__txt02" data-aos="fade-right" data-aos-duration="800"
+                            data-aos-delay="1500">We
+                            introduse exelent collection of white and red wines.
+                        Feel the scent of sun and happiness.</span>
+                    </div>
+                </div>
+            </div>
             <!-- 主內容 end -->
         </div>
         <!-- 主頁區域 end -->
     </div>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
