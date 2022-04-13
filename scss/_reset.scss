@@ -131,7 +131,7 @@ tt {
 	::-webkit-scrollbar {
 		width: 6px;
 		height: 6px;
-		background: map-get($bg_color, beige);
+		background: map-get($bg_color, transparent);
 	}
 
 	::-webkit-scrollbar-thumb {
@@ -148,6 +148,6 @@ tt {
 	}
 
 	::-webkit-scrollbar-corner {
-		background: map-get($bg_color, beige);
+		background: map-get($bg_color, transparent);
 	}
 }

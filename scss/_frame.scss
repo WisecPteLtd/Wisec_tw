@@ -4,6 +4,7 @@
 
     @include mw_md{
         height: auto;
+        min-height: 100%;
     }
 }
 
@@ -15,11 +16,13 @@
     
     @include mw_md {
         height: auto;
+        min-height: 100%;
     }
 
     // .main__active_btn
     &__active_btn {
         @include pos_a(tl, 10px);
+        position: fixed;
         width: 24px;
         height: 17px;
         z-index: 1;
@@ -67,6 +70,12 @@
     &__info {
         @include scrollbar(hidden, auto);
         height: 100%;
+
+        @include mw_md {
+            @include scrollbar(unset, unset);
+            height: auto;
+            min-height: 100%;
+        }
     }
 }
 
