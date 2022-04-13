@@ -14,7 +14,7 @@
     
     // .home__note
     &__note{
-        @include pos_a(tl, 20%, 10%);
+        @include pos_a(tl, 200px, 10%);
         width: 100%;
         max-width: 750px;
         padding: 0 10px;
